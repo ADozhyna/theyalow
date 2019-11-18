@@ -1,39 +1,45 @@
 @font-face {
   font-family: "Segoe WP light";
-  src: url("assets/fonts/segoe-wp-light.ttf");
+  src: url("../assets/fonts/segoe-wp-light.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Lucida sans";
-  src: url("assets/fonts/Lucida\ Sans\ Regular.ttf");
+  src: url("../assets/fonts/Lucida\ Sans\ Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lucida sans";
-  src: url("assets/fonts/Lucida\ Sans\ Italic.ttf");
+  src: url("../assets/fonts/Lucida\ Sans\ Italic.ttf");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Asap";
-  src: url("assets/fonts/Asap-Regular.otf");
+  src: url("../assets/fonts/Asap-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "PT Sans";
-  src: url("assets/fonts/PTS55F.ttf");
+  src: url("../assets/fonts/PTS55F.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("assets/fonts/OpenSans-Regular.ttf");
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+}
+body {
+  max-width: 1300px;
+  min-width: 640px;
+  width: 100%;
+  margin: 0 auto;
 }
 main {
   max-width: 1300px;
@@ -70,6 +76,11 @@ main {
   display: flex;
   justify-content: space-between;
   width: 30%;
+}
+
+.logo img {
+  width: 85px;
+  height: 85px;
 }
 .logo h1 {
   font-family: "Lucida Sans", Verdana, sans-serif;
@@ -113,13 +124,13 @@ nav {
 }
 
 .topmenu li:nth-child(1) {
-  background-image: url("assets/img/icon1.svg");
+  background-image: url("../assets/img/icon1.svg");
 }
 .topmenu li:nth-child(2) {
-  background-image: url("assets/img/icon2.svg");
+  background-image: url("../assets/img/icon2.svg");
 }
 .topmenu li:nth-child(3) {
-  background-image: url("assets/img/icon3.svg");
+  background-image: url("../assets/img/icon3.svg");
   padding-left: 37px;
 }
 
@@ -136,6 +147,14 @@ nav {
   position: relative;
   width: 550px;
   height: 330px;
+}
+.video video {
+  width: 550px;
+  height: 330px;
+}
+
+video[poster] {
+  object-fit: cover;
 }
 .mask {
   position: absolute;
@@ -162,8 +181,9 @@ nav {
 .button-prev {
   width: 32px;
   height: 60px;
+  border: none;
   background-color: #f5c506;
-  background-image: url("assets/img/arrows.svg");
+  background-image: url("../assets/img/arrows.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -171,6 +191,7 @@ nav {
 .button-prev:hover {
   cursor: pointer;
   background-color: #752e2c;
+  border: none;
 }
 .button-next {
   position: absolute;
@@ -187,7 +208,7 @@ nav {
 /*--------Start services style------*/
 .services {
   width: 100%;
-  background-image: url("assets/img/pattern1.png");
+  background-image: url("../assets/img/pattern1.png");
   background-repeat: repeat;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5),
     0px -3px 3px 0px rgba(0, 0, 0, 0.5);
@@ -195,6 +216,7 @@ nav {
   z-index: 5;
 }
 .service-boxes {
+  box-sizing: content-box;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -208,11 +230,28 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  flex: 1;
   padding: 40px 0 25px 0;
-  width: 33%;
+  /*width: 33%;*/
   text-align: center;
   border-left: 1px solid #cfcfcf;
 }
+
+.arrow{
+  width: 120px;
+  height: 80px;
+}
+
+.leaf{
+  width: 130px;
+  height: 95px;
+}
+
+.plane{
+  width: 90px;
+  height: 83px;
+}
+
 
 .service-boxes:last-child {
   border-right: 1px solid #cfcfcf;
@@ -229,7 +268,7 @@ nav {
 /*--------Start third-scroll style---------*/
 .third-scroll {
   padding-bottom: 20px;
-  background-image: url("assets/img/pattern2.png");
+  background-image: url("../assets/img/pattern2.png");
   background-repeat: repeat;
 }
 .third-scroll h2 {
@@ -256,6 +295,11 @@ nav {
   max-height: 232px;
   max-width: 64%;
   width: 100%;
+}
+
+.video-container video {
+  width: 315px;
+  height: 232px;
 }
 .description {
   background-color: #ec9e03;
@@ -296,6 +340,11 @@ nav {
   width: 32.5%;
   max-height: 232px;
   background-color: #ec9e03;
+}
+
+.twitter-icon img {
+  width: 160px;
+  height: 133px;
 }
 
 .twitter-icon p:first-child {
@@ -345,16 +394,17 @@ nav {
 }
 /*--------Start last-scroll style-------*/
 .last-scroll {
-  padding-bottom: 92px;
-  background-image: url("assets/img/pattern3.png");
+  padding-bottom: 100px;
+  background-image: url("../assets/img/pattern3.png");
   background-repeat: repeat;
 }
 .last-scroll .container {
+  display: flex;
   align-items: flex-end;
 }
 .last-scroll h2 {
   margin: 0 0;
-  padding: 40px 0 55px;
+  padding: 40px 0 45px 0;
   text-align: center;
   font-family: "PT Sans", sans-serif;
   font-size: 43px;
@@ -381,7 +431,7 @@ nav {
 }
 .price {
   position: absolute;
-  top: -53px;
+  top: -45px;
   left: -5px;
   width: 118px;
   height: 118px;
@@ -397,15 +447,18 @@ nav {
   text-align: center;
 }
 .last-scroll ul {
-  margin: 10px 0;
+  margin-top: 20px;
   width: 36%;
-  list-style-image: url("assets/img/marker.svg");
+  list-style-image: url("../assets/img/marker.svg");
 }
 .last-scroll ul li {
-  padding: 20px 0 0 20px;
+  padding: 15px 0 0 20px;
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
   color: #a9a9a7;
+}
+.last-scroll ul li:nth-child(1){
+  padding-top: 0;
 }
 /*-------Start footer style-------*/
 .page-footer {
@@ -420,8 +473,14 @@ nav {
   width: 100%;
   margin: 0 auto;
 }
-.logo-footer h1 {
+
+.logo-footer img {
+  width: 55px;
+  height: 55px;
+}
+.logo-footer h2 {
   font-family: "Lucida Sans", Verdana, sans-serif;
+  padding-left: 5px;
   font-size: 29px;
   font-style: italic;
   font-weight: normal;
@@ -447,12 +506,14 @@ nav {
   .logo img {
     width: 40px;
     height: 40px;
+    padding-left: 10px;
   }
   .logo h1 {
     font-size: 19px;
+    padding: 5px 0 0 5px;
   }
   .logo {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 29%;
     height: 65px;
@@ -472,9 +533,9 @@ nav {
     margin: 0;
     padding: 0;
   }
-
   .topmenu li a {
     font-size: 19px;
+    padding: 0 0 0 5px;
   }
   .slider {
     margin: 0 0;
@@ -484,20 +545,20 @@ nav {
   .video {
     margin: 0 auto;
     padding: 0 0;
-    width: 100%;
-    height: 100%;
+    width: 640px;
+    height: 328px;
   }
   .video video {
     width: 640px;
-    height: auto;
+    height: 328px;
   }
   .icon-box img {
     width: 90px;
     height: 60px;
   }
   .icon-box {
-    padding: 35px 18px 20px;
-    width: 32%;
+    padding: 35px 18px 25px;
+    flex: 1;
     align-items: center;
     border: none;
   }
@@ -553,17 +614,21 @@ nav {
     display: none;
   }
   .last-scroll {
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     background-image: none;
     background-color: #474747;
   }
   .image-box {
-    width: 84%;
+    width: 88%;
     margin: auto;
   }
   .last-scroll h2 {
     font-size: 39px;
     padding: 30px 0 85px 0;
+    width: 100%;
+  }
+  footer{
+    max-width: 640px;
   }
   .logo-footer {
     max-width: 640px;
@@ -574,20 +639,23 @@ nav {
     height: 30px;
     margin-left: 65px;
   }
-  .logo-footer h1 {
+  .logo-footer h2 {
     font-size: 17px;
   }
 
   .tweets {
     width: 44.5%;
     display: inherit;
-    padding-top: 17.5px;
+    padding-top: 10px;
     flex-direction: column;
+    align-items: left;
   }
   .twitter-icon .tweets p {
     position: relative;
     display: inherit;
-    padding: 10px 20px;
+    width: 90%;
+    align-self: flex-start;
+    padding: 5px 5px;
     margin: 7.5px 0;
     background-color: #fceeb5;
     border-radius: 8px;
@@ -601,14 +669,18 @@ nav {
     position: absolute;
     width: 0;
     height: 0;
-    left: -22px;
+    left: -15px;
     top: 15px;
-    border: 15px solid;
+    border: 10px solid;
     border-color: transparent #fceeb5 transparent transparent;
     border-radius: 15px;
   }
   .twitter-icon {
-    padding-bottom: 15px;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-left: 35px;
+    padding-top: 15px;
+    padding-right: 30px;
   }
   .twitter-icon .tweets p:first-child {
     background-color: #fff;
@@ -621,6 +693,9 @@ nav {
   }
   .twitter-icon .tweets p:last-child:before {
     background-color: #fbe89c;
+  }
+  .form-groop {
+    display: flex;
   }
   input[type="text"] {
     width: 200px;
@@ -640,6 +715,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: #fff;
+    display: block;
     transition: all 0.5s linear;
   }
   input[type="submit"]:hover {
